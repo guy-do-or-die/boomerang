@@ -1,0 +1,151 @@
+/* line 1, ../sass/app.sass */
+body,
+input {
+  font-family: "Roboto Slab", serif;
+}
+
+/* line 5, ../sass/app.sass */
+body {
+  padding: 50px;
+  font-size: 13px;
+  color: #555555;
+  background: #f8f5f0 url("../img/paper_background.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+/* line 12, ../sass/app.sass */
+.holdPhone {
+  width: 400px;
+  margin: 0 auto;
+  padding: 0 400px 0 0;
+  background: url(../img/phone.png) top right no-repeat;
+  min-height: 655px;
+}
+/* line 19, ../sass/app.sass */
+.holdPhone > h1,
+.holdPhone > div {
+  width: 400px;
+}
+
+/* line 23, ../sass/app.sass */
+a {
+  color: #00b7ff;
+}
+
+/* line 26, ../sass/app.sass */
+h1,
+h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #343434;
+}
+
+/* line 32, ../sass/app.sass */
+h1 {
+  text-shadow: 1px 2px 2px #dddddd;
+  font-size: 60px;
+}
+
+/* line 36, ../sass/app.sass */
+h2 {
+  padding: 20px 0;
+}
+
+/* line 39, ../sass/app.sass */
+input.invis {
+  width: 0;
+  border: 0;
+  padding: 0;
+}
+
+/* line 44, ../sass/app.sass */
+input[type=text] {
+  width: 380px;
+  height: 36px;
+  line-height: 33px;
+  padding: 5px 3px;
+  font-size: 30px;
+  background: #d35400;
+  color: white;
+  border: 0;
+}
+/* line 54, ../sass/app.sass */
+input[type=text]::-webkit-input-placeholder {
+  color: white;
+  font-size: 16px;
+}
+/* line 58, ../sass/app.sass */
+input[type=text]:-moz-placeholder {
+  color: white;
+  font-size: 16px;
+}
+/* line 62, ../sass/app.sass */
+input[type=text]::-moz-placeholder {
+  color: white;
+  font-size: 16px;
+}
+/* line 66, ../sass/app.sass */
+input[type=text]:-ms-input-placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+/* line 70, ../sass/app.sass */
+.menu {
+  list-style-type: none;
+  margin: 10px auto;
+  padding: 0 0 10px 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+/* line 78, ../sass/app.sass */
+.menu:after {
+  content: " ";
+  display: block;
+}
+/* line 82, ../sass/app.sass */
+.menu li {
+  float: left;
+  padding: 7px 22px;
+  margin: 0 7px 0 0;
+  cursor: pointer;
+}
+/* line 88, ../sass/app.sass */
+.menu li:first-child {
+  margin-left: -22px;
+}
+/* line 91, ../sass/app.sass */
+.menu li.active, .menu li:hover {
+  background: #d35400;
+  color: white;
+}
+
+/* line 96, ../sass/app.sass */
+.txt {
+  text-align: left;
+  width: 400px;
+  margin: 20px auto;
+}
+/* line 102, ../sass/app.sass */
+.txt h3 span {
+  cursor: pointer;
+  float: right;
+}
+/* line 106, ../sass/app.sass */
+.txt h4 {
+  margin: 10px 0 5px;
+}
+
+/* line 109, ../sass/app.sass */
+.clear {
+  clear: both;
+}
+
+/* line 112, ../sass/app.sass */
+.ppal {
+  border: 0;
+  padding: 7px 14px;
+  background: #e7cda1;
+  cursor: pointer;
+}

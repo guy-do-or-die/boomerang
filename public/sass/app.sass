@@ -1,0 +1,116 @@
+body,
+input
+  font-family: "Roboto Slab", serif
+
+body 
+  padding: 50px
+  font-size: 13px
+  color: #555
+  background: rgb(248,245,240) url('../img/paper_background.jpg') 0 0 no-repeat
+  background-size: cover
+
+.holdPhone
+  width: 400px
+  margin: 0 auto
+  padding: 0 400px 0 0
+  background: url(../img/phone.png) top right no-repeat
+  min-height: 655px
+
+  > h1,
+  > div
+    width: 400px
+
+a 
+  color: #00b7ff
+
+h1,
+h2 
+  margin: 0
+  font-size: 18px
+  color: #343434
+
+h1 
+  text-shadow: 1px 2px 2px #ddd
+  font-size: 60px
+
+h2
+  padding: 20px 0
+
+input.invis 
+  width: 0
+  border: 0
+  padding: 0
+
+input[type=text] 
+  width: 380px
+  height: 36px
+  line-height: 33px
+  padding: 5px 3px
+  font-size: 30px
+  background: #d35400
+  color: #fff
+  border: 0
+
+  &::-webkit-input-placeholder /* WebKit browsers */
+    color: white
+    font-size: 16px
+
+  &:-moz-placeholder /* Mozilla Firefox 4 to 18 */
+    color: white
+    font-size: 16px
+
+  &::-moz-placeholder /* Mozilla Firefox 19+ */
+    color: white
+    font-size: 16px
+
+  &:-ms-input-placeholder /* Internet Explorer 10+ */
+    color: white
+    font-size: 16px
+
+.menu
+  list-style-type: none
+  margin: 10px auto
+  padding: 0 0 10px 0
+  position: fixed
+  bottom: 0
+  right: 0
+
+  &:after
+    content: " "
+    display: block
+
+  li
+    float: left
+    padding: 7px 22px
+    margin: 0 7px 0 0
+    cursor: pointer
+
+    &:first-child
+      margin-left: -22px
+
+    &.active,
+    &:hover
+      background: #d35400
+      color: #fff
+
+.txt
+  text-align: left
+  width: 400px
+  margin: 20px auto
+
+  h3
+    span  
+      cursor: pointer
+      float: right
+
+  h4
+    margin: 10px 0 5px
+
+.clear
+  clear: both
+
+.ppal
+  border: 0
+  padding: 7px 14px
+  background: rgb(231, 205, 161)
+  cursor: pointer

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <title>Message to the Future</title>
+  </head>
+<body ng-app>
+  <div class="holdPhone">
+    <h1>Message <br>
+      to the <br>
+      Future</h1> 
+    <h2>leave a message to your future self</h2>
+
+    <div ng-controller="NewCallCtrl">
+      <form>
+        <div>
+          <input type="text" ng-model="form.phoneNumber"
+            ng-keyup="resizeInput()"
+            ng-keydown="resizeInput()"
+            ng-style="inputStyle"
+            placeholder="Type your phone number like 79871234567"
+            >
+          <input class="invis" type="submit" value="Call me" ng-click="submitCall()">
+        </div>
+        <p>{{ message }}</p>
+      </form>
+    </div>
+
+    <div ng-controller="PayPalCtrl">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="{{ paypal_button_key }}">
+        Today it's free but anyway you can 
+        <input type="submit" name="submit" value="donate $2" alt="PayPal" class="ppal"> 
+        <small>(it's PayPal)</small>
+      </form>
+    </div>
+
+    <div ng-init="show_part=''" ng-controller="PartsCtrl">
+      <ul class="menu">
+        <li ng-click="togglePart('faq')" ng-class="faq_is_active">FAQ</li>
+        <li ng-click="togglePart('disclaimer')" ng-class="disclaimer_is_active">Disclaimer</li>
+      </ul>
+      <div class="clear">
+      </div>
+      <div ng-show="show_part=='faq'" class="txt">
+        <h3>
+          FAQ <span ng-click="togglePart('')">[x]</span>
+        </h3>
+        <h4>What is rECHOrd?</h4> 
+
+        This is a service that allows you to hear your message for yourself in the future. 
+        In practice, this means that you leave your phone number to the service and receive a phone call back immediately. You must then talk to yourself (leave a message) for up to 10 minutes and hang up. In 2 years' time you will receive a call back to the same phone number you have left, replaying your message back at you. 
+
+        <h4>Why would I do this?</h4> 
+        We all live in such a fast-paced world that the idea works at both points - while being recorded, since you really step away from your life and take a good look from a distance, and when being played back - for better or worse, you have changed and hadn’t even noticed. Taking a moment to have a look at yourself from this perspective is both healthy and useful. The service is all about emotion - it's about reminiscing and thinking and nostalgia. But even if something went terribly wrong and you never heard your message again, the time you have spent looking at your life right now and talking it through is well worth it. 
+
+        <h4>Does this cost anything?</h4> 
+        Yes, each call costs 2$, and you can pay via PayPal. 
+
+        <h4>What if I change or lose my number?</h4> 
+        Unfortunately we wouldn't be able to reach you in this case - messages are stored and tied strictly to one phone number, and can not be rooted out and redirected to another (we wouldn't want your personal message getting into the wrong hands by accident or evil intention). 
+
+        <h4>What if I miss the call?</h4> 
+        The service will call you every 2 hours for the first 12 hours and then send you an SMS saying what all that was about. You will have an option to start the calls back up again. 
+
+        <h4>Will my phone number go out to any third parties?</h4> 
+        Of course not! The most if will be used for is to call you back twice (for the message to be recorded, and to be played back), and a text message in case you hadn't been picking your phone up.. 
+
+        <h4>Does this work everywhere in the world?</h4> 
+        Dunno. Does it?
+      </div>
+      <div ng-show="show_part=='disclaimer'" class="txt">
+        <h3>
+          Disclaimer <span ng-click="show_part=''">[x]</span>
+        </h3>
+        <p>Processing :)</p>
+      </div>
+    </div>
+
+</div> <!-- holdPhone -->
+
+
+  <script type="text/javascript" src="lib/angular-unstable/angular.min.js"></script>
+  <script type="text/javascript" src="js/controllers.js"></script>
+</body>
+</html>

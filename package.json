@@ -1,0 +1,25 @@
+{
+  "name": "rechord",
+  "repository" : {
+    "type": "git",
+    "url" : "https://github.com/dreamindustries/boomerang.git"
+  },
+  "description": "Message to future you",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=development ./node_modules/.bin/nodemon app.js",
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "dependencies": {
+    "express": "latest",
+    "mongodb": ">= 0.9.6-7",
+    "forever": "latest",
+    "plivo": "latest",
+    "paynode":"latest",
+    "bower":"latest",
+    "consolidate":"latest",
+    "xml-writer":"latest",
+    "ejs": "latest"
+  }
+}

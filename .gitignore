@@ -1,0 +1,7 @@
+dump/
+.sass-cache
+.DS_Store
+node_modules/
+public/lib
+*.swp
+*.log
